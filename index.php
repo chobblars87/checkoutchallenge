@@ -1,9 +1,5 @@
 <?php
 
-	ini_set('display_errors', 1);
-	ini_set('display_startup_errors', 1);
-	error_reporting(E_ALL);
-	
 	require_once 'authentication.php';
 
 	session_start();
@@ -123,12 +119,6 @@
 			<?php echo $html; ?>
 		</div>
 		<script>
-
-			/*window.onclick = function(event) {
-			  	if (event.target == document.getElementById("main")) {
-			    	modal.style.display = "block";
-				}
-			}*/
 			
 			$(function() {
 
@@ -155,13 +145,6 @@
 					    }
 				    );
 				});
-				/*$("#submitLogin").click( function(e) {
-    				//e.preventDefault();
-		        });
-
-		        $("#logout").click( function(e) {
-
-		        });*/
 		    });
 
 			

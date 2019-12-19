@@ -1,4 +1,6 @@
 <?php
+	
+	include_once 'authentication.php';
 
 	session_start();
 	if ($_POST['logout'] == true) {
@@ -6,7 +8,7 @@
 	} 
 
 	if ($_SESSION['auth'] || !empty($_POST['password']) ) {
-		if ($_POST['password'] = "Ady3nT3chT3st!") {
+		if ($_POST['password'] == PASSWORD) {
 		    $_SESSION['auth'] = true;
 		
 			$html = '

@@ -9,6 +9,17 @@
 			$_SESSION['auth'] = false;
 		}
 	}
+	$countDetails = 0;
+	
+	if (isset($_GET['email'])) {
+		$countDetails++;
+	}
+	if (isset($_GET['firstname'])) {
+		$countDetails++;
+	}
+	if (isset($_GET['lastname'])) {
+		$countDetails++;
+	}
 
 	if ($_SESSION['auth'] == true || (!empty($_POST['password']) && $_POST['password'] == PASSWORD)) {
 	    $_SESSION['auth'] = true;
@@ -65,10 +76,24 @@
 							<div class="instructions">
 								The first step is to create a user for the Adyen Dashboard. This is where you can access our portal in to the platform, and see your payments coming in once you\'ve completed the first part of the integration and can help diagnose any problems you may be facing during your integration.
 							</div>
-							<form id="reqUser">
-								<input type="text" name="firstname" />
-								<input type="text" name="lastname" />
-								<input type="email" name="email" />
+							<form id="reqUser">';
+
+						if ($countDetails > 0 && $countDetails < 3) {
+							$html .= '
+								<div class="instructions" id="contactPassed">
+									Please check the following details below and complete the additional required fields before clicking submit:
+								</div>';
+						} elseif ($countDetails == 3) {
+							$html .= '
+								<div class="instructions" id="contactPassed">
+									Please check the following details below and click Submit:
+								</div>';
+						}
+
+						$html .= '
+								<input type="text" name="firstname" value="' . $_GET['firstname'] . '" />
+								<input type="text" name="lastname" value="' . $_GET['lastname'] . '" />
+								<input type="email" name="email" value="' . $_GET['email'] . '" />
 								<input type="hidden" name="timezone" id="timezone" value="">
 								<input type="submit" />
 							</form>

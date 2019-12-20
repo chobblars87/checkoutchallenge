@@ -76,7 +76,7 @@
 
 	$json = json_encode($data);
 	
-	//$inviteWebUser = doCurl($prefix . "inviteWebUser", $json);
+	$inviteWebUser = doCurl($prefix . "inviteWebUser", $json);
 
 
 

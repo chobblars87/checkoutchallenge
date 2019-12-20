@@ -100,47 +100,42 @@
 
 							<div class="instructions">
 								The first step is to create a user for the Adyen Dashboard. This is where you can access our portal in to the platform, and see your payments coming in once you\'ve completed the first part of the integration and can help diagnose any problems you may be facing during your integration.
-<<<<<<< HEAD
 							</div>
-							<form id="reqUser">';
-
+							<form id="reqUser">
+								<br/>
+								<div class="instructions" ';
+						if ($countDetails == 0) {
+							$html .= '>
+									Please fill out the following details ';
+						}
 						if ($countDetails > 0 && $countDetails < 3) {
 							$html .= '
-								<div class="instructions" id="contactPassed">
-									Please check the following details below and complete the additional required fields before clicking submit:
-								</div>';
+								id="contactPassed">
+									Please check the following details below and complete the additional required fields ';
 						} elseif ($countDetails == 3) {
 							$html .= '
-								<div class="instructions" id="contactPassed">
-									Please check the following details below and click Submit:
-								</div>';
+								id="contactPassed">
+									Please check the following details below ';
 						}
 
-						$html .= '
-								<input type="text" name="firstname" value="' . $_GET['firstname'] . '" />
-								<input type="text" name="lastname" value="' . $_GET['lastname'] . '" />
-								<input type="email" name="email" value="' . $_GET['email'] . '" />
-=======
-							</div><br/>
-							<form id="reqUser">
-							<div class="row">
+						$html .= 'in order to be sent an invite link to the Adyen Dashboard before clicking submit:
+								</div>
+							<br/><div class="row">
               <div class="col-md-6 mb-3">
                 <label for="firstName">First name</label>
-                <input type="text" class="form-control" name="firstname" placeholder="" value="" required>
+                <input type="text" class="form-control" name="firstname" placeholder="" value="' . $_GET['firstname'] . '" required>
               </div>
               <div class="col-md-6 mb-3">
                 <label for="lastName">Last name</label>
-                <input type="text" class="form-control" name="lastname" placeholder="" value="" required>
+                <input type="text" class="form-control" name="lastname" placeholder="" value="' . $_GET['lastname'] . '" required>
               </div>
             </div>
 
             <div class="mb-3">
               <label for="email">Email</label>
-              <input type="email" class="form-control" name="email" placeholder="you@example.com" required>
+              <input type="email" class="form-control" name="email" placeholder="you@example.com" value="' . $_GET['email'] . '" required>
             </div>
-
->>>>>>> 98f53b2ce155d0d1cab01fdc63c07de13df70f5c
-								<input type="hidden" name="timezone" id="timezone" value="">
+								<input type="hidden" name="timezone" id="timezone" value=""><br/>
 								<button class="btn btn-success" type="submit">Create Account</button>
 							</form>
 						</div>
@@ -181,7 +176,7 @@
 	<head>
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 		<link rel="stylesheet" href="style.css">
-		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+		<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
   	<script src="addons/jstimezonedetect/dist/jstz.min.js"></script>

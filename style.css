@@ -118,3 +118,7 @@ button:hover {
 #logout {
   position: absolute;
 }
+
+#reqUser button.btn-success {
+  line-height: 2;
+}

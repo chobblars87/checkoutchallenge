@@ -1,6 +1,6 @@
 <?php
 
-	require_once 'authentication.php';
+	require_once ('authentication.php');
 
 	session_start();
 
@@ -20,6 +20,7 @@
 	if (isset($_GET['lastname'])) {
 		$countDetails++;
 	}
+	$header = ""; $body = ""; $footer = ""; $endbody = "";
 
 	if ($_SESSION['auth'] == true || (!empty($_POST['password']) && $_POST['password'] == PASSWORD)) {
 	    $_SESSION['auth'] = true;

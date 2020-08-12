@@ -1,8 +1,8 @@
 <?php
 
-	ini_set('display_errors', 1);
-	ini_set('display_startup_errors', 1);
-	error_reporting(E_ALL);
+	// ini_set('display_errors', 1);
+	// ini_set('display_startup_errors', 1);
+	// error_reporting(E_ALL);
 
 	$prefix = "https://ca-test.adyen.com/ca/services/CAAccountService/";
 
@@ -56,38 +56,40 @@
 		$email = $_POST['email'];
 		$firstname = $_POST['firstname'];
 		$lastname = $_POST['lastname'];
+
+		if (isset($_POST['timezone'])) {
+			$timezone = $_POST['timezone'];
+		} else {
+			$timezone = "Asia/Singapore";
+		}
+
+		$data = array(
+			'email' => $email,
+			'merchantCodes' => array('MerchantAccount.SupportRecruitementCOM'),
+			'name' => array('firstName' => $firstname, 'lastName' => $lastname),
+			'roles' => array("Merchant_standard_role", "Merchant_technical_integrator", "Merchant_manage_payments"),
+			'timeZoneCode' => $timezone,
+			'userName' => strtolower($firstname . "." . $lastname)
+		);
+
+		$json = json_encode($data);
+
+		$inviteWebUser = doCurl($prefix . "inviteWebUser", $json);
 	}
 
-	if (isset($_POST['timezone'])) {
-		$timezone = $_POST['timezone'];
-	} else {
-		$timezone = "Asia/Singapore";
-	}
-	
-	
-	$data = array(
-		'email' => $email,
-		'merchantCodes' => array('MerchantAccount.SupportRecruitementCOM'),
-		'name' => array('firstName' => $firstname, 'lastName' => $lastname),
-		'roles' => array("Merchant_standard_role", "Merchant_technical_integrator"),
-		'timeZoneCode' => $timezone,
-		'userName' => strtolower($firstname . "." . $lastname)
-	);
-
-	$json = json_encode($data);
-	
-	$inviteWebUser = doCurl($prefix . "inviteWebUser", $json);
 
 
 
-	// GET LIST OF ALL USERS 
+
+
+	// GET LIST OF ALL USERS
 	/*$data = "{}";
 	$allUsers = doCurl($prefix . "getWebUserNames", $data);
 
 	$userNames = $allUsers['userNames'];
 
 	$json = json_encode(array("userName"=>$userNames[0]));
-	
+
 	// GET DETAILS OF EACH USER -> Too resource intensive
 	foreach ($userNames as $user) {
 		$json = json_encode(array("userName"=>$user));

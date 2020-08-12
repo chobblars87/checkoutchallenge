@@ -10,7 +10,7 @@
 		}
 	}
 	$countDetails = 0;
-	
+
 	if (isset($_GET['email'])) {
 		$countDetails++;
 	}
@@ -68,15 +68,23 @@
 							To help you with creating the 3D2, you can refer to the web (or mobile should you wish) payment - <a href="https://docs.adyen.com/checkout/3d-secure/native-3ds2/api-integration#submit-a-payment-request">https://docs.adyen.com/checkout/3d-secure/native-3ds2/api-integration#submit-a-payment-request</a>, if you are using Drop-in, you would need to handle <code>onAdditionalDetails</code> (<a href="https://docs.adyen.com/checkout/drop-in-web#step-4-additional-front-end">https://docs.adyen.com/checkout/drop-in-web#step-4-additional-front-end</a>)<br/><br/>
 
 							<hr class="mb-4">
-
-							Once you have completed the integration, please send us the link to the page you have created. Please be prepared to walk us through it (including any challenges you had) during your next interview. Additionally, Please share the following:<br/><br/>
+								<div class="sc-notice info">
+									Please feel free to run this locally on your machine using any of the following ports: <br />
+									<ul>
+										<li>3000</li>
+										<li>5000</li>
+										<li>8000</li>
+										<li>8080</li>
+									</ul>
+									Using any of these ports will allow you to successfully connect to Adyen using the following clientKey:<br/>
+									<pre><code>test_GWXWP766DVDVHP3NUESVCEBV5AKZCOGJ</code></pre>
+								</div>
+								During your next interview, we will ask you to walk us through your code and your demo implementation. Additionally, please share the following:<br/><br/>
 
 							<ul>
   							<li>Example requests / responses from your integration for all API calls</li>
   							<li>2 PSP references (unique payment reference) for two example payments - one using Visa/Mastercard with 3DS2, and one alternative local payment of your choice (Bank transfer / Vouchers / etc)</li>
 							</ul>
-
-
 
 
 								<div class="sc-notice info"><div>
@@ -87,13 +95,13 @@
 								<div class="sc-notice info"><div>
 								<p>Useful links:
 								<ul>
-									<li>Free Web Hosting for your server: <a href="https://www.000webhost.com/">https://www.000webhost.com/</a></li>
 									<li>Adyen Drop-in Integration: <a href="https://docs.adyen.com/checkout/drop-in-web">https://docs.adyen.com/checkout/drop-in-web</a></li>
 									<li>Adyen Git Libraries: <a href="https://github.com/Adyen">https://github.com/Adyen</a></li>
 									<li>Adyen Test Cards: <a href="https://docs.adyen.com/developers/test-cards/test-card-numbers">https://docs.adyen.com/developers/test-cards/test-card-numbers</a></li>
 								</ul>
 								</p>
-								</div></div>
+								</div>
+							</div>
 
 						<hr class="mb-4">
 						<div id="caReg">

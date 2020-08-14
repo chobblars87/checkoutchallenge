@@ -67,7 +67,7 @@
 			'email' => $email,
 			'merchantCodes' => array('MerchantAccount.SupportRecruitementCOM'),
 			'name' => array('firstName' => $firstname, 'lastName' => $lastname),
-			'roles' => array("Merchant_standard_role", "Merchant_technical_integrator", "Merchant_manage_payments"),
+			'roles' => array("Merchant_standard_role", "Merchant_technical_integrator", "View_Payments"),
 			'timeZoneCode' => $timezone,
 			'userName' => strtolower($firstname . "." . $lastname)
 		);

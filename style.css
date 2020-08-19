@@ -15,9 +15,6 @@ body {
     box-sizing: border-box;
 }
 
-/// Grid system
-//
-// Generate semantic grid columns with these mixins.
 
 @mixin make-container($gutter: $grid-gutter-width) {
   width: 100%;
@@ -272,10 +269,6 @@ label {
   padding-bottom: 7px;
 }
 
-#caReg {
-    padding-bottom: 10px;
-}
-
 /* The Modal (background) */
 .modal {
   display: none; /* Hidden by default */
@@ -375,4 +368,71 @@ button:hover {
 
 #reqUser button.btn-success {
   line-height: 2;
+}
+
+ol {
+    counter-reset: list;
+    padding: 0 20px;
+    margin-bottom: 0px;
+}
+
+ol > li {
+    list-style: none;
+}
+
+ol > li:before {
+    content: counter(list) ") ";
+    counter-increment: list;
+}
+
+.multi-notice {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.fillspace {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info.rorw {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+}
+
+.info.ok {
+  border-color: green;
+}
+
+.info.not {
+  border-color: red;
+}
+
+.info.ok:before {
+  background: green;
+}
+
+.info.not:before {
+  background: red;
+}
+
+.info.nopad:before {
+    width: 0px;
+}
+
+.info.nopad {
+    padding: 12px;
+    width: 100%;
+}
+
+.bottom-spacer {
+  margin-bottom: 20px;
+}
+
+.nobot {
+    margin-bottom: 0px !important;
 }

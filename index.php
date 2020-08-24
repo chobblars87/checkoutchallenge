@@ -40,47 +40,36 @@
 					</div>
 					<div class="card">
 						<div class="challenge card-body">
-							<h5>Challenge 1: Checkout, Checkout, Checkout</h5><br />
-
-							You will be using Adyen\’s Checkout Drop-in web solution to integrate a typical eCommerce shopper checkout flow. Follow the instructions below and don\'t hesitate to reach out to us if you need any help!<br /><br />
-
-							Using the programming language of your choice, integrate the following (including backend server):<br />
-							<a href="https://docs.adyen.com/checkout/drop-in-web">https://docs.adyen.com/checkout/drop-in-web</a><br /><br />
-
-							At the minimum, your integration needs to meet the conditions below:<br />
-
+							<h5>Challenge 1: Checkout, Checkout, Checkout</h5>
+							<p>You will be using Adyen’s Checkout Drop-in web solution to integrate a typical eCommerce shopper checkout flow. Follow the instructions below and don\'t hesitate to reach out to us if you need any help!</p>
+							<p>Using the programming language of your choice, integrate the following (including backend server): <br />
+							<a href="https://docs.adyen.com/checkout/drop-in-web">https://docs.adyen.com/checkout/drop-in-web</a>.</p>
+							<p>At the minimum, your integration needs to meet the conditions below:</p>
 							<div class="sc-notice info">
 								<ol>
-									<li>Accept card payments (Visa and MasterCard)</li>
+									<li>Accept card payments (Visa and Mastercard)</li>
 									<li>Accept at least 1 local payment method - for example:
 									 	<ul>
 											<li>Alipay (for CN/SG)</li>
 											<li>POLi (for AU/NZ)</li>
-											<li>iDeal (NL)</li>
+											<li>iDEAL (NL)</li>
 										</ul>
 									</li>
 									<li>Perform 3DS2 on all card payments - <a href="https://docs.adyen.com/checkout/3d-secure/redirect-3ds2-3ds1/web-drop-in">https://docs.adyen.com/checkout/3d-secure/redirect-3ds2-3ds1/web-drop-in</a></li>
 								</ol>
 							</div>
-							<br />
-							Once you have completed the integration, please be prepared to walk us through it (including any challenges you had) during your next interview. Additionally, please share the following:<br />
-							<br />
+							<p>Once you have completed the integration, please be prepared to walk us through it (including any challenges you had) during your next interview. Additionally, please share the following:</p>
 							<ul>
 								<li>2 pspReferences (unique payment reference) for two example payments - one card payment and one local payment method.</li>
 								<li>Example requests / responses for the above-mentioned pspReferences for all API calls (merchantAccount: AdyenRecruitmentCOM)</li>
 								<li>Your entire project to us via a ZIP file/Github <strong><u>before</u></strong> the interview so that we can also look at it.</li>
 							</ul>
-							When making your payment request, make sure that the value for your reference field is set to: ' . (isset($_GET['firstname']) ? $_GET['firstname'] : '{yourFirstName}') . '_checkoutChallenge.
-							<br /><br />
-							With regards to the overall UI, feel free to design it in any way you please. Also, the above three conditions are the baseline integration, but feel free to add on more functionality to your checkout flow.
-							<br /><br />
-							Lastly, as there are example integrations online, <u><strong>no pre-built libraries or example code</strong> may be used in your solution</u>.
-							<br />
-
-								Here are some examples of what we are referring to:
+							<p>When making your payment request, make sure that the value for your reference field is set to: ' . (isset($_GET['firstname']) ? $_GET['firstname'] : '{yourFirstName}') . '_checkoutChallenge.</p>
+							<p>With regards to the overall UI, feel free to design it in any way you please. Also, the above three conditions are the baseline integration, but feel free to add on more functionality to your checkout flow.</p>
+							<p>Lastly, as there are example integrations online, <u><strong>no pre-built libraries or example code</strong> may be used in your solution</u>. Here are some examples of what we are referring to:</p>
 								<div class="multi-notice">
 									<div class="sc-notice info rorw ok">
-										Ok to use:<br />
+										OK to use:
 										<div class="fillspace">
 											<ul>
 												<li>PHP: cURL library for HTTP POST requests</li>
@@ -91,7 +80,7 @@
 										</div>
 									</div>
 									<div class="sc-notice info rorw not">
-										Not ok to use: any pre-built library that interacts directly with Adyen over API. For example:
+										Not OK to use: any pre-built library that interacts directly with Adyen over API. For example:
 										<ul>
 											<li><a href = "https://github.com/Adyen/adyen-python-api-library">https://github.com/Adyen/adyen-python-api-library</a></li>
 											<li><a href = "https://github.com/Adyen/adyen-java-api-library">https://github.com/Adyen/adyen-java-api-library</a></li>
@@ -137,11 +126,8 @@
 								</ul>
 								Please ensure that your website is running on one of the above permitted domains; if not you will be unable to load your credit card fields.<br /><em style="font-size:14px">If you do want to run your server on another domain, feel free to reach out to me and we will add it for you.</em>
 							</div>
-							<br />
-							If you are in the midst of testing credit card payments, and are getting a 422: Unable to decrypt data error, that\'s an issue with the domain where you are hosting your front-end website or the clientKey. Nonetheless, feel free to reach out to us if you still cannot resolve the error.
-							<br /><br />
-							You don’t need to publicly host your website (however, please feel free to do so). We will schedule a Zoom call for you to run through your solution with us.';
-
+							<p>If you are in the midst of testing credit card payments, and are getting a 422: Unable to decrypt data error, that\'s an issue with the domain where you are hosting your front-end website or the clientKey. Nonetheless, feel free to reach out to us if you still cannot resolve the error.</p>
+							<p>You don’t need to publicly host your website (however, please feel free to do so). We will schedule a Zoom call for you to run through your solution with us.</p>';
 
 					$footer = '<div id="footer">
 									<hr class="mb-4">
@@ -235,14 +221,16 @@
 	}
 
 ?>
-
-<html>
+<!DOCTYPE html>
+<html lang="en">
 	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Adyen Checkout Challenge</title>
     <link type="image/ico" rel="shortcut icon" href="images/favicon.ico">
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-		<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
 		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 		<link rel="stylesheet" href="style.css">
 	 	<script src="addons/jstimezonedetect/dist/jstz.min.js"></script>
 	</head>
@@ -305,7 +293,6 @@
 				    );
 				});
 		    });
-
 
 		</script>
 	</body>

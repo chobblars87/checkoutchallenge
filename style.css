@@ -241,13 +241,13 @@ label {
 
 .info {
   border-radius: 3px;
-  margin: 12px 0;
   min-height: 20px;
   padding: 12px 12px 12px 48px;
   position: relative;
   display: table;
   border: 3px solid transparent;
   border-color: #cce0ff;
+  margin: 12px 20px;
 }
 
 .info:before {
@@ -388,7 +388,9 @@ ol > li:before {
 .multi-notice {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  /* max-width: 100%; */
+  flex-wrap: wrap;
+  justify-content: end;
 }
 
 .fillspace {
@@ -402,6 +404,7 @@ ol > li:before {
     display: flex;
     flex-direction: column;
     max-width: 500px;
+    min-width: 400px;
 }
 
 .info.ok {

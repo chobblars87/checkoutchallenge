@@ -42,7 +42,7 @@
 						<div class="challenge card-body">
 							<h5>Challenge 1: Checkout, Checkout, Checkout</h5><br />
 
-							You will be using Adyen\’s Checkout Drop-in web solution to integrate a typical eCommerce shopper checkout flow. Follow the instructions below and don\'t hesitate to reach out to us if you need any help!<br /><br />
+							You will be using Adyen’s Checkout Drop-in web solution to integrate a typical eCommerce shopper checkout flow. Follow the instructions below and don’t hesitate to reach out to us if you need any help!<br /><br />
 
 							Using the programming language of your choice, integrate the following (including backend server):<br />
 							<a href="https://docs.adyen.com/checkout/drop-in-web">https://docs.adyen.com/checkout/drop-in-web</a><br /><br />
@@ -91,7 +91,7 @@
 										</div>
 									</div>
 									<div class="sc-notice info rorw not">
-										Not ok to use: any pre-built library that interacts directly with Adyen over API. For example:
+										Not ok to use: API wrappers. For example:
 										<ul>
 											<li><a href = "https://github.com/Adyen/adyen-python-api-library">https://github.com/Adyen/adyen-python-api-library</a></li>
 											<li><a href = "https://github.com/Adyen/adyen-java-api-library">https://github.com/Adyen/adyen-java-api-library</a></li>
@@ -138,18 +138,18 @@
 								Please ensure that your website is running on one of the above permitted domains; if not you will be unable to load your credit card fields.<br /><em style="font-size:14px">If you do want to run your server on another domain, feel free to reach out to me and we will add it for you.</em>
 							</div>
 							<br />
-							If you are in the midst of testing credit card payments, and are getting a 422: Unable to decrypt data error, that\'s an issue with the domain where you are hosting your front-end website or the clientKey. Nonetheless, feel free to reach out to us if you still cannot resolve the error.
+							If you are in the midst of testing credit card payments, and are getting a 422: Unable to decrypt data error, that’s an issue with the domain where you are hosting your front-end website or the clientKey. Nonetheless, feel free to reach out to us if you still cannot resolve the error.
 							<br /><br />
-							You don’t need to publicly host your website (however, please feel free to do so). We will schedule a Zoom call for you to run through your solution with us.';
+							You don’t need to publicly host your website (however, please feel free to do so). We will schedule a Zoom call for you to share your screen and run through your solution with us.';
 
 
 					$footer = '<div id="footer">
 									<hr class="mb-4">
 
-									<b>Adyen\'s Dashboard (Web Portal)</b><br/><br/>
+									<b>Adyen’s Dashboard (Web Portal)</b><br/><br/>
 									<div id="caReg">
 										<div class="instructions">
-											The final piece of the puzzle that you will need is to a user for the Adyen Dashboard; a portal from where you can access data and insights in to the platform, and see your payments coming in once you\'ve completed the first part of the integration to help diagnose any problems you may be facing.
+											The final piece of the puzzle that you will need is to a user for the Adyen Dashboard; a portal from where you can access data and insights in to the platform, and see your payments coming in once you’ve completed the first part of the integration to help diagnose any problems you may be facing.
 										</div>
 										<form id="reqUser">
 											<br/>
@@ -298,7 +298,7 @@
 						    	);
 
 					    	} else {
-					    		alert("Error... please contact your Adyen interviewer or paul@adyen.com");
+					    		alert("Error submitting the request for Customer Area access... please contact your Adyen interviewer or paul@adyen.com");
 					    	}
 
 					    }

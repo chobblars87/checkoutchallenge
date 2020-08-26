@@ -123,6 +123,7 @@ a {
     text-decoration: none;
     background-color: transparent;
     cursor: pointer;
+    word-break: break-word;
 }
 
 hr {
@@ -143,7 +144,7 @@ hr {
 }
 
 p {
-    margin-top: 0;
+    margin-top: 1rem;
     margin-bottom: 1rem;
 }
 
@@ -155,7 +156,7 @@ code, kbd, pre, samp {
 code {
     font-size: 87.5%;
     color: #e83e8c;
-    word-wrap: break-word;
+    word-break: break-word;
 }
 
 dl, ol, ul {
@@ -388,9 +389,14 @@ ol > li:before {
 .multi-notice {
   display: flex;
   flex-direction: row;
+<<<<<<< HEAD
   /* max-width: 100%; */
   flex-wrap: wrap;
   justify-content: end;
+=======
+  flex-wrap: wrap;
+  justify-content: space-around;
+>>>>>>> 47b9dddb000c48917b084bd146b67b626eae39ba
 }
 
 .fillspace {
@@ -424,12 +430,15 @@ ol > li:before {
 }
 
 .info.nopad:before {
-    width: 0px;
+  width: 0px;
+}
+
+.info {
+  width: 100%;
 }
 
 .info.nopad {
-    padding: 12px;
-    width: 100%;
+  padding: 12px;
 }
 
 .bottom-spacer {

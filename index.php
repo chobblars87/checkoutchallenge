@@ -40,23 +40,11 @@
 					</div>
 					<div class="card">
 						<div class="challenge card-body">
-<<<<<<< HEAD
-							<h5>Challenge 1: Checkout, Checkout, Checkout</h5><br />
-
-							You will be using Adyen’s Checkout Drop-in web solution to integrate a typical eCommerce shopper checkout flow. Follow the instructions below and don’t hesitate to reach out to us if you need any help!<br /><br />
-
-							Using the programming language of your choice, integrate the following (including backend server):<br />
-							<a href="https://docs.adyen.com/checkout/drop-in-web">https://docs.adyen.com/checkout/drop-in-web</a><br /><br />
-
-							At the minimum, your integration needs to meet the conditions below:<br />
-
-=======
 							<h5>Challenge 1: Checkout, Checkout, Checkout</h5>
 							<p>You will be using Adyen’s Checkout Drop-in web solution to integrate a typical eCommerce shopper checkout flow. Follow the instructions below and don\'t hesitate to reach out to us if you need any help!</p>
 							<p>Using the programming language of your choice, integrate the following (including backend server): <br />
 							<a href="https://docs.adyen.com/checkout/drop-in-web">https://docs.adyen.com/checkout/drop-in-web</a>.</p>
 							<p>At the minimum, your integration needs to meet the conditions below:</p>
->>>>>>> 47b9dddb000c48917b084bd146b67b626eae39ba
 							<div class="sc-notice info">
 								<ol>
 									<li>Accept card payments (Visa and Mastercard)</li>
@@ -142,16 +130,10 @@
 								</ul>
 								Please ensure that your website is running on one of the above permitted domains; if not you will be unable to load your credit card fields.<br /><em style="font-size:14px">If you do want to run your server on another domain, feel free to reach out to me and we will add it for you.</em>
 							</div>
-<<<<<<< HEAD
-							<br />
-							If you are in the midst of testing credit card payments, and are getting a 422: Unable to decrypt data error, that’s an issue with the domain where you are hosting your front-end website or the clientKey. Nonetheless, feel free to reach out to us if you still cannot resolve the error.
-							<br /><br />
-							You don’t need to publicly host your website (however, please feel free to do so). We will schedule a Zoom call for you to share your screen and run through your solution with us.';
 
-=======
-							<p>If you are in the midst of testing credit card payments, and are getting a 422: Unable to decrypt data error, that\'s an issue with the domain where you are hosting your front-end website or the clientKey. Nonetheless, feel free to reach out to us if you still cannot resolve the error.</p>
-							<p>You don’t need to publicly host your website (however, please feel free to do so). We will schedule a Zoom call for you to run through your solution with us.</p>';
->>>>>>> 47b9dddb000c48917b084bd146b67b626eae39ba
+							<p>If you are in the midst of testing credit card payments, and are getting a 422: Unable to decrypt data error, that’s an issue with the domain where you are hosting your front-end website or the clientKey. Nonetheless, feel free to reach out to us if you still cannot resolve the error.</p>
+							<p>You don’t need to publicly host your website (however, please feel free to do so). We will schedule a Zoom call for you to share your screen and run through your solution with us.</p>';
+
 
 					$footer = '<div id="footer">
 									<hr class="mb-4">
@@ -212,7 +194,7 @@
 
 								<h5>Challenge 2: The Adyen (not so) Tech Test </h5><br/>
 								In addition, please follow the link below to access a quick quiz and fill out your answers. This should not take any longer than 30 minutes, but please take as much time as you need!<br/><br/>
-								<a href="https://www.surveymonkey.com/r/87YYFFZ">https://www.surveymonkey.com/r/87YYFFZ</a>
+								<a href="https://forms.gle/bFGdcUr9oYkqj8NW8">Not so Technical Test</a>
 								<div class="bottom-spacer"></div>
 							</div>
 						</div>

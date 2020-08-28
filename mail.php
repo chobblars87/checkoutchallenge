@@ -2,8 +2,8 @@
 
 	require_once '../auth/credentials.php';
 
-	$to = "";
-	$name = "";
+	$to = "paul@adyen.com";
+	$name = "Test";
 
 	if (isset($_POST['email']) && isset($_POST['firstname'])) {
 		$to = $_POST['email'];
@@ -144,13 +144,15 @@ The permitted domains for the above <strong style="box-sizing: border-box;font-w
 												<br style="box-sizing: border-box;">
 												You don’t need to publicly host your website (however, please feel free to do so). We will schedule a Zoom call for you to share your screen and run through your solution with us.
 											</div>
-											<hr class="mb-4" style="box-sizing:content-box;height:0;overflow:visible;margin-top:1rem;border-width:0;border-top-width:1px;border-top-style:solid;border-top-color:rgba(0,0,0,.1);margin-bottom:1.5rem!important;" >
 											<div class="challenge card-body" style="box-sizing:border-box;-ms-flex:1 1 auto;flex:1 1 auto;min-height:1px;padding-top:1.25rem;padding-right:1.25rem;padding-left:1.25rem;padding-bottom:0px;" >
-												<h5 style="box-sizing:border-box;margin-top:0;margin-bottom:.5rem;font-weight:500;line-height:1.2;font-size:1.25rem;" >Challenge 1: The Adyen (not so) Tech Test </h5><br style="box-sizing:border-box;" />
+												<h5 style="box-sizing:border-box;margin-top:0;margin-bottom:.5rem;font-weight:500;line-height:1.2;font-size:1.25rem;" >Challenge 2: The Adyen (not so) Tech Test </h5>
+												<br style="box-sizing:border-box;" />
 												In addition, please follow the link below to access a quick quiz and fill out your answers. This should not take any longer than 30 minutes, but please take as much time as you need!
 												<br style="box-sizing:border-box;" />
 												<br style="box-sizing:border-box;" />
 												<a href="https://forms.gle/bFGdcUr9oYkqj8NW8" style="box-sizing:border-box;color:#007bff;text-decoration:none;background-color:transparent;cursor:pointer;" >Not so Technical Test</a>
+												<br style="box-sizing:border-box;" />
+												<br style="box-sizing:border-box;" />
 											</div>
 										</div>
 									</div>

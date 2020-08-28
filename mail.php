@@ -2,8 +2,8 @@
 
 	require_once '../auth/credentials.php';
 
-	$to = "paul@adyen.com";
-	$name = "Test";
+	$to = "";
+	$name = "";
 
 	if (isset($_POST['email']) && isset($_POST['firstname'])) {
 		$to = $_POST['email'];

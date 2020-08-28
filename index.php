@@ -80,11 +80,7 @@
 										</div>
 									</div>
 									<div class="sc-notice info rorw not">
-<<<<<<< HEAD
 										Not ok to use: API wrappers. For example:
-=======
-										Not OK to use: any pre-built library that interacts directly with Adyen over API. For example:
->>>>>>> 47b9dddb000c48917b084bd146b67b626eae39ba
 										<ul>
 											<li><a href = "https://github.com/Adyen/adyen-python-api-library">https://github.com/Adyen/adyen-python-api-library</a></li>
 											<li><a href = "https://github.com/Adyen/adyen-java-api-library">https://github.com/Adyen/adyen-java-api-library</a></li>
@@ -94,7 +90,6 @@
 										</ul>
 									</div>
 								</div>
-
 							<br />
 							<strong>Helpful Links</strong>
 							<div class="sc-notice info">

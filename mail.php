@@ -25,26 +25,34 @@
 										</div>
 										<div class="card" style="box-sizing: border-box;position: relative;display: flex;-ms-flex-direction: column;flex-direction: column;min-width: 0;word-wrap: break-word;background-color: #fff;background-clip: border-box;border: 1px solid rgba(0,0,0,.125);border-radius: .25rem;">
 											<div class="challenge card-body" style="box-sizing: border-box;-ms-flex: 1 1 auto;flex: 1 1 auto;min-height: 1px;padding: 1.25rem;">
-												<h5 style="box-sizing: border-box;margin-top: 0;margin-bottom: .5rem;font-weight: 500;line-height: 1.2;font-size: 1.25rem;">Challenge 1: Checkout, Checkout, Checkout</h5><br style="box-sizing: border-box;">
+												<h5 style="box-sizing: border-box;margin-top: 0;margin-bottom: .5rem;font-weight: 500;line-height: 1.2;font-size: 1.25rem;">Challenge 1: Checkout, Checkout, Checkout</h5>
+												<br style="box-sizing: border-box;">
 
-												You will be using Adyen’s Checkout Drop-in web solution to integrate a typical eCommerce shopper checkout flow. Follow the instructions below and don’t hesitate to reach out to us if you need any help!<br style="box-sizing: border-box;"><br style="box-sizing: border-box;">
+												You will be using Adyen’s Checkout Drop-in web solution to integrate a typical eCommerce shopper checkout flow. Follow the instructions below and don’t hesitate to reach out to us if you need any help!<br style="box-sizing: border-box;">
+												<br style="box-sizing: border-box;">
 
 												Using the programming language of your choice, integrate the following (including backend server):<br style="box-sizing: border-box;">
-												<a href="https://docs.adyen.com/checkout/drop-in-web" style="box-sizing: border-box;color: #007bff;text-decoration: underline;background-color: transparent;">https://docs.adyen.com/checkout/drop-in-web</a><br style="box-sizing: border-box;"><br style="box-sizing: border-box;">
+												<a href="https://docs.adyen.com/checkout/drop-in-web" style="box-sizing: border-box;color: #007bff;text-decoration: underline;background-color: transparent;">https://docs.adyen.com/checkout/drop-in-web</a><br style="box-sizing: border-box;">
+												<br style="box-sizing: border-box;">
 
 												At the minimum, your integration needs to meet the conditions below:<br style="box-sizing: border-box;">
 
 												<div class="sc-notice info" style="box-sizing: border-box; border-radius: 3px; margin: 12px 0; min-height: 20px; padding: 12px 12px 12px 48px; position: relative; display: table; border: 3px solid transparent; border-color: #cce0ff;">
-
 													<div class="bluebox" style="background: #cce0ff; display: block; height: 100%; left: 0; position: absolute; top: 0; width: 36px;"></div>
-<p style="box-sizing: border-box; margin: 0 20px;">1) Accept card payments (Visa and MasterCard)</p><p style="box-sizing: border-box; margin: 0 20px;">2) Accept at least 1 local payment method - for example:
-														 	<ul style="box-sizing: border-box;margin-top: 0;margin-bottom: 0;">
-																<li style="box-sizing: border-box;">Alipay (for CN/SG)</li>
-																<li style="box-sizing: border-box;">POLi (for AU/NZ)</li>
-																<li style="box-sizing: border-box;">iDeal (NL)</li>
-															</ul>
-														</p><p style="box-sizing: border-box; margin: 0 20px;">3) Perform 3DS2 on all card payments - <a href="https://docs.adyen.com/checkout/3d-secure/redirect-3ds2-3ds1/web-drop-in" style="box-sizing: border-box;color: #007bff;text-decoration: underline;background-color: transparent;">https://docs.adyen.com/checkout/3d-secure/redirect-3ds2-3ds1/web-drop-in</a></p><ol style="box-sizing: border-box;margin-top: 0;margin-bottom:0; counter-reset: list; padding: 0 20px;">
-													</ol>
+													<p style="box-sizing: border-box; margin: 0 20px;">
+														1) Accept card payments (Visa and MasterCard)
+													</p>
+													<p style="box-sizing: border-box; margin: 0 20px;">
+														2) Accept at least 1 local payment method - for example:
+													 	<ul style="box-sizing: border-box;margin-top: 0;margin-bottom: 0;">
+															<li style="box-sizing: border-box;">Alipay (for CN/SG)</li>
+															<li style="box-sizing: border-box;">POLi (for AU/NZ)</li>
+															<li style="box-sizing: border-box;">iDeal (NL)</li>
+														</ul>
+													</p>
+													<p style="box-sizing: border-box; margin: 0 20px;">
+														3) Perform 3DS2 on all card payments - <a href="https://docs.adyen.com/checkout/3d-secure/redirect-3ds2-3ds1/web-drop-in" style="box-sizing: border-box;color: #007bff;text-decoration: underline;background-color: transparent;">https://docs.adyen.com/checkout/3d-secure/redirect-3ds2-3ds1/web-drop-in</a>
+													</p>
 												</div>
 												<br style="box-sizing: border-box;">
 												Once you have completed the integration, please be prepared to walk us through it (including any challenges you had) during your next interview. Additionally, please share the following:<br style="box-sizing: border-box;">
@@ -61,104 +69,95 @@
 												Lastly, as there are example integrations online, <u style="box-sizing: border-box;"><strong style="box-sizing: border-box;font-weight: bolder;">no pre-built libraries or example code</strong> may be used in your solution</u>.
 												<br style="box-sizing: border-box;">
 
-													Here are some examples of what we are referring to:
-													<div class="multi-notice" style="box-sizing: border-box;">
-														<div class="sc-notice info" style="box-sizing: border-box; border-radius: 3px; margin: 12px 0; min-height: 20px; padding: 12px 12px 12px 48px; position: relative; display: table; border: 3px solid transparent; border-color: green;">
-
-													<div class="bluebox" style="background: green; display: block;height: 100%;left: 0;position: absolute;top: 0;width: 36px;"></div>
-<p style="box-sizing: border-box; margin: 0 20px;">
-Ok to use:</p><ul style="box-sizing: border-box;margin-top: 0;margin-bottom: 1rem;">
-																	<li style="box-sizing: border-box;">PHP: cURL library for HTTP POST requests</li>
-																	<li style="box-sizing: border-box;">Python: requests library</li>
-																	<li style="box-sizing: border-box;">Node: express/axios</li>
-																	<li style="box-sizing: border-box;">C#: HttpClient</li>
-																</ul>
-
-												</div>
-
-
+												Here are some examples of what we are referring to:
+												<div class="multi-notice" style="box-sizing: border-box;">
+													<div class="sc-notice info" style="box-sizing: border-box; border-radius: 3px; margin: 12px 0; min-height: 20px; padding: 12px 12px 12px 48px; position: relative; display: table; border: 3px solid transparent; border-color: green;">
+														<div class="bluebox" style="background: green; display: block;height: 100%;left: 0;position: absolute;top: 0;width: 36px;"></div>
+															<p style="box-sizing: border-box; margin: 0 20px;">
+																Ok to use:
+															</p>
+															<ul style="box-sizing: border-box;margin-top: 0;margin-bottom: 1rem;">
+																<li style="box-sizing: border-box;">PHP: cURL library for HTTP POST requests</li>
+																<li style="box-sizing: border-box;">Python: requests library</li>
+																<li style="box-sizing: border-box;">Node: express/axios</li>
+																<li style="box-sizing: border-box;">C#: HttpClient</li>
+															</ul>
+														</div>
 														<div class="sc-notice info" style="box-sizing: border-box; border-radius: 3px; margin: 12px 0; min-height: 20px; padding: 12px 12px 12px 48px; position: relative; display: table; border: 3px solid transparent; border-color: red;">
-
-													<div class="bluebox" style="background: red; display: block;height: 100%;left: 0;position: absolute;top: 0;width: 36px;"></div>
-<p style="box-sizing: border-box; margin: 0 20px;">Not ok to use: API wrappers. For example:
-</p><ul style="box-sizing: border-box;margin-top: 0;margin-bottom: 1rem;">
+															<div class="bluebox" style="background: red; display: block;height: 100%;left: 0;position: absolute;top: 0;width: 36px;"></div>
+															<p style="box-sizing: border-box; margin: 0 20px;">
+																Not ok to use: API wrappers. For example:
+															</p>
+															<ul style="box-sizing: border-box;margin-top: 0;margin-bottom: 1rem;">
 																<li style="box-sizing: border-box;"><a href="https://github.com/Adyen/adyen-python-api-library" style="box-sizing: border-box;color: #007bff;text-decoration: underline;background-color: transparent;">https://github.com/Adyen/adyen-python-api-library</a></li>
 																<li style="box-sizing: border-box;"><a href="https://github.com/Adyen/adyen-java-api-library" style="box-sizing: border-box;color: #007bff;text-decoration: underline;background-color: transparent;">https://github.com/Adyen/adyen-java-api-library</a></li>
 																<li style="box-sizing: border-box;"><a href="https://github.com/Adyen/adyen-php-api-library" style="box-sizing: border-box;color: #007bff;text-decoration: underline;background-color: transparent;">https://github.com/Adyen/adyen-php-api-library</a></li>
 																<li style="box-sizing: border-box;"><a href="https://github.com/Adyen/adyen-dotnet-api-library" style="box-sizing: border-box;color: #007bff;text-decoration: underline;background-color: transparent;">https://github.com/Adyen/adyen-dotnet-api-library</a></li>
 																<li style="box-sizing: border-box;"><a href="https://github.com/Adyen/adyen-node-api-library" style="box-sizing: border-box;color: #007bff;text-decoration: underline;background-color: transparent;">https://github.com/Adyen/adyen-node-api-library</a></li>
 															</ul>
-
-												</div>
-
+														</div>
+													</div>
+													<br style="box-sizing: border-box;">
+													<strong style="box-sizing: border-box;font-weight: bolder;">Helpful Links</strong>
+													<div class="sc-notice info" style="box-sizing: border-box; border-radius: 3px; margin: 12px 0; min-height: 20px; padding: 12px 12px 12px 48px; position: relative; display: table; border: 3px solid transparent; border-color: #cce0ff;">
+														<div class="bluebox" style="background: #cce0ff; display: block; height: 100%; left: 0; position: absolute; top: 0; width: 36px;"></div>
+														<ul style="box-sizing: border-box;margin-top: 0;margin-bottom: 1rem;">
+															<li style="box-sizing: border-box;">
+																Drop-in Documentation
+																<ul style="box-sizing: border-box;margin-top: 0;margin-bottom: 0;">
+																	<li style="box-sizing: border-box;"><a href="https://docs.adyen.com/checkout/drop-in-web" style="box-sizing: border-box;color: #007bff;text-decoration: underline;background-color: transparent;">https://docs.adyen.com/checkout/drop-in-web</a></li>
+																	<li style="box-sizing: border-box;"><a href="https://docs.adyen.com/checkout/3d-secure/redirect-3ds2-3ds1/web-drop-in" style="box-sizing: border-box;color: #007bff;text-decoration: underline;background-color: transparent;">https://docs.adyen.com/checkout/3d-secure/redirect-3ds2-3ds1/web-drop-in</a></li>
+																</ul>
+															</li>
+															<li style="box-sizing: border-box;">Test credentials: <a href="https://docs.adyen.com/developers/test-cards/test-card-numbers" style="box-sizing: border-box;color: #007bff;text-decoration: underline;background-color: transparent;">https://docs.adyen.com/developers/test-cards/test-card-numbers</a></li>
+															<li style="box-sizing: border-box;">Code examples: <a href="https://github.com/Adyen/" style="box-sizing: border-box;color: #007bff;text-decoration: underline;background-color: transparent;">https://github.com/Adyen/</a></li>
+														</ul>
+													</div>
+													<br style="box-sizing: border-box;">
+													<strong style="box-sizing: border-box;font-weight: bolder;">Authentication &amp; Credentials</strong>
+													<div class="sc-notice info" style="box-sizing: border-box; border-radius: 3px; margin: 12px 0; min-height: 20px; padding: 12px 12px 12px 48px; position: relative; display: table; border: 3px solid transparent; border-color: #cce0ff;">
+														<div class="bluebox" style="background: #cce0ff; display: block; height: 100%; left: 0; position: absolute; top: 0; width: 36px;"></div>
+														<ul style="box-sizing: border-box;margin-top: 0;margin-bottom: 1rem;">
+															<li style="box-sizing: border-box;">merchantAccount: <code style="box-sizing: border-box;font-family: SFMono-Regular,Menlo,Monaco,Consolas,&quot;Liberation Mono&quot;,&quot;Courier New&quot;,monospace;font-size: 87.5%;color: #e83e8c;word-wrap: break-word;">AdyenRecruitmentCOM</code></li>
+															<li style="box-sizing: border-box;">API Key (x-api-key): <code style="box-sizing: border-box;font-family: SFMono-Regular,Menlo,Monaco,Consolas,&quot;Liberation Mono&quot;,&quot;Courier New&quot;,monospace;font-size: 87.5%;color: #e83e8c;word-wrap: break-word;">AQE1hmfxKo3NaxZDw0m/n3Q5qf3Ve55dHZxYTFdTxWq+l3JOk8J4BO7yyZBJ4o0JviXqoc8j9sYQwV1bDb7kfNy1WIxIIkxgBw==-q7XjkkN/Cud0WELZF+AzXpp/PuCB8+XmcdgqHYUWzTA=-Kk9N4dG837tIyjZF</code></li>
+															<li style="box-sizing: border-box;">Client Key (clientKey): <code style="box-sizing: border-box;font-family: SFMono-Regular,Menlo,Monaco,Consolas,&quot;Liberation Mono&quot;,&quot;Courier New&quot;,monospace;font-size: 87.5%;color: #e83e8c;word-wrap: break-word;">test_GWXWP766DVDVHP3NUESVCEBV5AKZCOGJ</code></li>
+														</ul>
+													</div>
+													<div class="sc-notice info" style="box-sizing: border-box; border-radius: 3px; margin: 12px 0; min-height: 20px; padding: 12px 12px 12px 48px; position: relative; display: table; border: 3px solid transparent; border-color: #cce0ff;">
+														<div class="bluebox" style="background: #cce0ff; display: block; height: 100%; left: 0; position: absolute; top: 0; width: 36px;"></div>
+														The permitted domains for the above <strong style="box-sizing: border-box;font-weight: bolder;">clientKey</strong> are: <br style="box-sizing: border-box;">
+														<ul style="box-sizing: border-box;margin-top: 0;margin-bottom: 1rem;">
+															<li style="box-sizing: border-box;">http://localhost:3000</li>
+															<li style="box-sizing: border-box;">http://localhost:5000</li>
+															<li style="box-sizing: border-box;">http://localhost:8000</li>
+															<li style="box-sizing: border-box;">http://localhost:8080</li>
+															<li style="box-sizing: border-box;">http://127.0.0.1:5000</li>
+														</ul>Please ensure that your website is running on one of the above permitted domains; if not you will be unable to load your credit card fields.<br style="box-sizing: border-box;"><em style="font-size: 14px;box-sizing: border-box;">If you do want to run your server on another domain, feel free to reach out to me and we will add it for you.</em>
 													</div>
 
-												<br style="box-sizing: border-box;">
-												<strong style="box-sizing: border-box;font-weight: bolder;">Helpful Links</strong>
-												<div class="sc-notice info" style="box-sizing: border-box; border-radius: 3px; margin: 12px 0; min-height: 20px; padding: 12px 12px 12px 48px; position: relative; display: table; border: 3px solid transparent; border-color: #cce0ff;">
-
-													<div class="bluebox" style="background: #cce0ff; display: block; height: 100%; left: 0; position: absolute; top: 0; width: 36px;"></div>
-<ul style="box-sizing: border-box;margin-top: 0;margin-bottom: 1rem;">
-														<li style="box-sizing: border-box;">
-															Drop-in Documentation
-															<ul style="box-sizing: border-box;margin-top: 0;margin-bottom: 0;">
-																<li style="box-sizing: border-box;"><a href="https://docs.adyen.com/checkout/drop-in-web" style="box-sizing: border-box;color: #007bff;text-decoration: underline;background-color: transparent;">https://docs.adyen.com/checkout/drop-in-web</a></li>
-																<li style="box-sizing: border-box;"><a href="https://docs.adyen.com/checkout/3d-secure/redirect-3ds2-3ds1/web-drop-in" style="box-sizing: border-box;color: #007bff;text-decoration: underline;background-color: transparent;">https://docs.adyen.com/checkout/3d-secure/redirect-3ds2-3ds1/web-drop-in</a></li>
-															</ul>
-														</li>
-														<li style="box-sizing: border-box;">Test credentials: <a href="https://docs.adyen.com/developers/test-cards/test-card-numbers" style="box-sizing: border-box;color: #007bff;text-decoration: underline;background-color: transparent;">https://docs.adyen.com/developers/test-cards/test-card-numbers</a></li>
-														<li style="box-sizing: border-box;">Code examples: <a href="https://github.com/Adyen/" style="box-sizing: border-box;color: #007bff;text-decoration: underline;background-color: transparent;">https://github.com/Adyen/</a></li>
-													</ul>
-
+													<br style="box-sizing: border-box;">If you are in the midst of testing credit card payments, and are getting a 422: Unable to decrypt data error, that’s an issue with the domain where you are hosting your front-end website or the clientKey. Nonetheless, feel free to reach out to us if you still cannot resolve the error.<br style="box-sizing: border-box;">
+													<br style="box-sizing: border-box;">
+													You will receive a separate email from Adyen with your user credentials. Your new username for the Adyen Customer Area should be:' . $user . '
+													<br style="box-sizing: border-box;">
+													<br style="box-sizing: border-box;">
+													You don’t need to publicly host your website (however, please feel free to do so). We will schedule a Zoom call for you to share your screen and run through your solution with us.
 												</div>
-
-												<br style="box-sizing: border-box;">
-												<strong style="box-sizing: border-box;font-weight: bolder;">Authentication &amp; Credentials</strong>
-												<div class="sc-notice info" style="box-sizing: border-box; border-radius: 3px; margin: 12px 0; min-height: 20px; padding: 12px 12px 12px 48px; position: relative; display: table; border: 3px solid transparent; border-color: #cce0ff;">
-
-													<div class="bluebox" style="background: #cce0ff; display: block; height: 100%; left: 0; position: absolute; top: 0; width: 36px;"></div>
-<ul style="box-sizing: border-box;margin-top: 0;margin-bottom: 1rem;">
-														<li style="box-sizing: border-box;">merchantAccount: <code style="box-sizing: border-box;font-family: SFMono-Regular,Menlo,Monaco,Consolas,&quot;Liberation Mono&quot;,&quot;Courier New&quot;,monospace;font-size: 87.5%;color: #e83e8c;word-wrap: break-word;">AdyenRecruitmentCOM</code></li>
-														<li style="box-sizing: border-box;">API Key (x-api-key): <code style="box-sizing: border-box;font-family: SFMono-Regular,Menlo,Monaco,Consolas,&quot;Liberation Mono&quot;,&quot;Courier New&quot;,monospace;font-size: 87.5%;color: #e83e8c;word-wrap: break-word;">AQE1hmfxKo3NaxZDw0m/n3Q5qf3Ve55dHZxYTFdTxWq+l3JOk8J4BO7yyZBJ4o0JviXqoc8j9sYQwV1bDb7kfNy1WIxIIkxgBw==-q7XjkkN/Cud0WELZF+AzXpp/PuCB8+XmcdgqHYUWzTA=-Kk9N4dG837tIyjZF</code></li>
-														<li style="box-sizing: border-box;">Client Key (clientKey): <code style="box-sizing: border-box;font-family: SFMono-Regular,Menlo,Monaco,Consolas,&quot;Liberation Mono&quot;,&quot;Courier New&quot;,monospace;font-size: 87.5%;color: #e83e8c;word-wrap: break-word;">test_GWXWP766DVDVHP3NUESVCEBV5AKZCOGJ</code></li>
-													</ul>
-
+												<hr class="mb-4" style="box-sizing:content-box;height:0;overflow:visible;margin-top:1rem;border-width:0;border-top-width:1px;border-top-style:solid;border-top-color:rgba(0,0,0,.1);margin-bottom:1.5rem!important;" >
+												<div class="challenge card-body" style="box-sizing:border-box;-ms-flex:1 1 auto;flex:1 1 auto;min-height:1px;padding-top:1.25rem;padding-right:1.25rem;padding-left:1.25rem;padding-bottom:0px;" >
+													<h5 style="box-sizing:border-box;margin-top:0;margin-bottom:.5rem;font-weight:500;line-height:1.2;font-size:1.25rem;" >Challenge 2: The Adyen (not so) Tech Test </h5>
+													<br style="box-sizing:border-box;" />
+													In addition, please follow the link below to access a quick quiz and fill out your answers. This should not take any longer than 30 minutes, but please take as much time as you need!
+													<br style="box-sizing:border-box;" />
+													<br style="box-sizing:border-box;" />
+													<a href="https://forms.gle/bFGdcUr9oYkqj8NW8" style="box-sizing:border-box;color:#007bff;text-decoration:none;background-color:transparent;cursor:pointer;" >Not so Technical Test</a>
+													<br style="box-sizing:border-box;" />
+													<br style="box-sizing:border-box;" />
 												</div>
-
-												<div class="sc-notice info" style="box-sizing: border-box; border-radius: 3px; margin: 12px 0; min-height: 20px; padding: 12px 12px 12px 48px; position: relative; display: table; border: 3px solid transparent; border-color: #cce0ff;">
-
-													<div class="bluebox" style="background: #cce0ff; display: block; height: 100%; left: 0; position: absolute; top: 0; width: 36px;"></div>
-The permitted domains for the above <strong style="box-sizing: border-box;font-weight: bolder;">clientKey</strong> are: <br style="box-sizing: border-box;">
-													<ul style="box-sizing: border-box;margin-top: 0;margin-bottom: 1rem;">
-														<li style="box-sizing: border-box;">http://localhost:3000</li>
-														<li style="box-sizing: border-box;">http://localhost:5000</li>
-														<li style="box-sizing: border-box;">http://localhost:8000</li>
-														<li style="box-sizing: border-box;">http://localhost:8080</li>
-														<li style="box-sizing: border-box;">http://127.0.0.1:5000</li>
-													</ul>Please ensure that your website is running on one of the above permitted domains; if not you will be unable to load your credit card fields.<br style="box-sizing: border-box;"><em style="font-size: 14px;box-sizing: border-box;">If you do want to run your server on another domain, feel free to reach out to me and we will add it for you.</em>
-												</div>
-
-												<br style="box-sizing: border-box;">If you are in the midst of testing credit card payments, and are getting a 422: Unable to decrypt data error, that’s an issue with the domain where you are hosting your front-end website or the clientKey. Nonetheless, feel free to reach out to us if you still cannot resolve the error.<br style="box-sizing: border-box;">
-												<br style="box-sizing: border-box;">You will receive a separate email from Adyen with your user credentials. Your new username for the Adyen Customer Area should be:' . $user . '
-												<br style="box-sizing: border-box;">
-												<br style="box-sizing: border-box;">
-												You don’t need to publicly host your website (however, please feel free to do so). We will schedule a Zoom call for you to share your screen and run through your solution with us.
-											</div>
-											<div class="challenge card-body" style="box-sizing:border-box;-ms-flex:1 1 auto;flex:1 1 auto;min-height:1px;padding-top:1.25rem;padding-right:1.25rem;padding-left:1.25rem;padding-bottom:0px;" >
-												<h5 style="box-sizing:border-box;margin-top:0;margin-bottom:.5rem;font-weight:500;line-height:1.2;font-size:1.25rem;" >Challenge 2: The Adyen (not so) Tech Test </h5>
-												<br style="box-sizing:border-box;" />
-												In addition, please follow the link below to access a quick quiz and fill out your answers. This should not take any longer than 30 minutes, but please take as much time as you need!
-												<br style="box-sizing:border-box;" />
-												<br style="box-sizing:border-box;" />
-												<a href="https://forms.gle/bFGdcUr9oYkqj8NW8" style="box-sizing:border-box;color:#007bff;text-decoration:none;background-color:transparent;cursor:pointer;" >Not so Technical Test</a>
-												<br style="box-sizing:border-box;" />
-												<br style="box-sizing:border-box;" />
 											</div>
 										</div>
 									</div>
 								</div>
-							</div>
-						</body>';
+							</body>';
 
 		//echo $html;// . $_POST['username'] . '
 

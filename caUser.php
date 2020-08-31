@@ -28,7 +28,7 @@
 			CURLOPT_HTTPHEADER => array(
 				"Content-Type: application/json",
 				"Content-Length: " . strlen($json),
-				"x-api-key: " . apikey //AQErhmfuXNWTK0Qc+iSRln09qdaeS5lYBIdHXWtCFbwlq70zWo2sT4D9q+gjfxDBXVsNvuR83LVYjEgiTGAH-yXCa4/3vrmFPvsdohqzBfDucrvitI7K4MHGeXcwFUBs=-3X6CIpykk:bM&>UL"
+				"x-api-key: " . apikey
 			),
 		));
 
@@ -58,16 +58,20 @@
 			$timezone = "Asia/Singapore";
 		}
 
+		$username = strtolower($firstname . "." . $lastname);
+
 		$data = array(
 			'email' => $email,
-			'merchantCodes' => array('MerchantAccount' . merchantAccount), //AdyenRecruitmentCOM'),
+			'merchantCodes' => array('MerchantAccount' . merchantAccount),
 			'name' => array('firstName' => $firstname, 'lastName' => $lastname),
 			'roles' => array("Merchant_standard_role", "Merchant_technical_integrator", "View_Payments"),
 			'timeZoneCode' => $timezone,
-			'userName' => strtolower($firstname . "." . $lastname)
+			'userName' => $username
 		);
 
 		$json = json_encode($data);
 
 		$inviteWebUser = doCurl($prefix . "inviteWebUser", $json);
+
+		echo json_encode($data);
 	}

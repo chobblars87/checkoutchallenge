@@ -28,7 +28,7 @@
 			CURLOPT_HTTPHEADER => array(
 				"Content-Type: application/json",
 				"Content-Length: " . strlen($json),
-				"x-api-key: " . apikey
+				"x-api-key: " . apikeyCAUserv2
 			),
 		));
 
@@ -62,7 +62,7 @@
 
 		$data = array(
 			'email' => $email,
-			'merchantCodes' => array('MerchantAccount' . merchantAccount),
+			'merchantCodes' => array('MerchantAccount' . merchantAccountv2),
 			'name' => array('firstName' => $firstname, 'lastName' => $lastname),
 			'roles' => array("Merchant_standard_role", "Merchant_technical_integrator", "View_Payments"),
 			'timeZoneCode' => $timezone,

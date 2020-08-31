@@ -20,6 +20,19 @@
 	if (isset($_GET['lastname'])) {
 		$countDetails++;
 	}
+
+	//if (isset($_GET['v2'])) {
+		$ver = 2;
+		$merchantAccount = merchantAccountv2;
+		$apikey = apikeyv2; //'AQEyhmfxLI3MaBFLw0m/n3Q5qf3VaY9UCJ14XWZE03G/k2NFitRvbe4N1XqH1eHaH2AksaEQwV1bDb7kfNy1WIxIIkxgBw==-y3qzswmlmALhxaVPNjYf74bqPotG12HroatrKA066yE=-W+t7NF;s4}%=kUSD';
+		$clientkey = clientkeyv2; //'test_CIXAPNBW2JERLEJ6GYYC3WBLVMO2HIZ3';
+	// } else {
+	// 	$ver = 1;
+	// 	$merchantAccount = merchantAccount;
+	// 	$apikey = apikey; //'AQE1hmfxKo3NaxZDw0m/n3Q5qf3Ve55dHZxYTFdTxWq+l3JOk8J4BO7yyZBJ4o0JviXqoc8j9sYQwV1bDb7kfNy1WIxIIkxgBw==-q7XjkkN/Cud0WELZF+AzXpp/PuCB8+XmcdgqHYUWzTA=-Kk9N4dG837tIyjZF';
+	// 	$clientkey = clientkey; //'test_GWXWP766DVDVHP3NUESVCEBV5AKZCOGJ';
+	// }
+
 	$header = ""; $body = ""; $footer = ""; $endbody = "";
 
 	if ($_SESSION['auth'] == true || (!empty($_POST['password']) && $_POST['password'] == PASSWORD)) {
@@ -36,12 +49,12 @@
 	$body = '<div id="main">
 				<div class="container">
 					<div class="intro">
-						Thanks for taking your time today! Please see the two follow up challenges below as part of your next step. <br/><br/>
+						Thank you for your time today! Please see the two tech challenges below. <br/><br/>
 					</div>
 					<div class="card">
 						<div class="challenge card-body">
 							<h5>Challenge 1: Checkout, Checkout, Checkout</h5>
-							<p>You will be using Adyen’s Checkout Drop-in web solution to integrate a typical eCommerce shopper checkout flow. Follow the instructions below and don\'t hesitate to reach out to us if you need any help!</p>
+							<p>You will be using Adyen’s Checkout Drop-in web solution to integrate a typical eCommerce shopper checkout flow. <br />Follow the instructions below and don\'t hesitate to reach out to us if you need any help!</p>
 							<p>Using the programming language of your choice, integrate the following (including backend server): <br />
 							<a href="https://docs.adyen.com/checkout/drop-in-web">https://docs.adyen.com/checkout/drop-in-web</a>.</p>
 							<p>At the minimum, your integration needs to meet the conditions below:</p>
@@ -61,7 +74,7 @@
 							<p>Once you have completed the integration, please be prepared to walk us through it (including any challenges you had) during your next interview. Additionally, please share the following:</p>
 							<ul>
 								<li>2 pspReferences (unique payment reference) for two example payments - one card payment and one local payment method.</li>
-								<li>Example requests / responses for the above-mentioned pspReferences for all API calls (merchantAccount: AdyenRecruitmentCOM)</li>
+								<li>Example requests / responses for the above-mentioned pspReferences for all API calls (merchantAccount: ' . $merchantAccount . ')</li>
 								<li>Your entire project to us via a ZIP file/Github <strong><u>before</u></strong> the interview so that we can also look at it.</li>
 							</ul>
 							<p>When making your payment request, make sure that the value for your reference field is set to: ' . (isset($_GET['firstname']) ? $_GET['firstname'] : '{yourFirstName}') . '_checkoutChallenge.</p>
@@ -109,9 +122,9 @@
 							<strong>Authentication & Credentials</strong>
 							<div class="sc-notice info">
 								<ul>
-									<li>merchantAccount: <code>AdyenRecruitmentCOM</code></li>
-									<li>API Key (x-api-key): <code>AQEyhmfxLI3MaBFLw0m/n3Q5qf3VaY9UCJ14XWZE03G/k2NFitRvbe4N1XqH1eHaH2AksaEQwV1bDb7kfNy1WIxIIkxgBw==-y3qzswmlmALhxaVPNjYf74bqPotG12HroatrKA066yE=-W+t7NF;s4}%=kUSD</code></li>
-									<li>Client Key (clientKey): <code>test_CIXAPNBW2JERLEJ6GYYC3WBLVMO2HIZ3</code></li>
+									<li>merchantAccount: <code>' . $merchantAccount . '</code></li>
+									<li>API Key (x-api-key): <code>' . $apikey . '</code></li>
+									<li>Client Key (clientKey): <code>' . $clientkey . '</code></li>
 								</ul>
 							</div>
 							<div class="sc-notice info">
@@ -123,7 +136,7 @@
 									<li>http://localhost:8080</li>
 									<li>http://127.0.0.1:5000</li>
 								</ul>
-								Please ensure that your website is running on one of the above permitted domains; if not you will be unable to load your credit card fields.<br /><em style="font-size:14px">If you do want to run your server on another domain, feel free to reach out to me and we will add it for you.</em>
+								Please ensure that your website is running on one of the above permitted domains; if not you will be unable to load your credit card fields.<br /><em style="font-size:14px">If you do want to run your server on another domain, feel free to reach out to us and we will add it for you.</em>
 							</div>
 
 							<p>If you are in the midst of testing credit card payments, and are getting a 422: Unable to decrypt data error, that’s an issue with the domain where you are hosting your front-end website or the clientKey. Nonetheless, feel free to reach out to us if you still cannot resolve the error.</p>
@@ -173,7 +186,8 @@
 								              	<label for="email">Email</label>
 								            	<input type="email" class="form-control" name="email" placeholder="you@example.com" value="' . $_GET['email'] . '" required>
 								            </div>
-											<input type="hidden" name="timezone" id="timezone" value=""><br/>
+											<input type="hidden" name="timezone" id="timezone" value="">
+											<input type="hidden" name="version" id="version" value="' . $ver . '"><br/>
 											<button class="btn btn-success" type="submit">Create Account</button>
 										</form>
 									</div>
@@ -249,8 +263,6 @@
 
 		<script>
 
-			var emailhtml = '<?php echo base64_encode(htmlentities($body . $endbody)); ?>';
-
 			$(function() {
 
 				if ('#timezone') {
@@ -275,7 +287,7 @@
 					    			'Thanks for submitting the form, you will now receive an email with an invite to create a password, giving you access to the Adyen Dashboard. <br/><br/>Best of luck!'
 					    			);
 					    		$.post(
-							    	'mail.php',
+							    	'mail<?php //if ($ver == 2) { echo "2"; }?>.php',
 							    	postdata + '&username=' + data.userName,
 							    	function(data,status) {
 							    		if (status == "success") {

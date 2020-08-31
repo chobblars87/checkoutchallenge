@@ -9,11 +9,23 @@
 		$to = $_POST['email'];
 		$name = $_POST['firstname'] . " " . $_POST['lastname'];
 		$user = strtolower($_POST['firstname'] . "." . $_POST['lastname']);
+		$ver = $_POST['version'];
 	}
 	if (isset($_GET['email']) && isset($_GET['firstname'])) {
 		$to = $_GET['email'];
 		$name = $_GET['firstname'] . " " . $_GET['lastname'];
 		$user = strtolower($_GET['firstname'] . "." . $_GET['lastname']);
+		$ver = $_GET['version'];
+	}
+
+	if ($ver == 2) {
+		$merchantAccount = merchantAccountv2;
+		$apikey = apikey;
+		$clientkey = clientkeyv2;
+	} else {
+		$merchantAccount = merchantAccount;
+		$apikey = apikey;
+		$clientkey = clientkey;
 	}
 
 		$html = '<body style="box-sizing: border-box;margin: 0;font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Roboto,&quot;Helvetica Neue&quot;,Arial,&quot;Noto Sans&quot;,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;,&quot;Segoe UI Symbol&quot;,&quot;Noto Color Emoji&quot;;font-size: 1rem;font-weight: 400;line-height: 1.5;color: #212529;text-align: left;background-color: #fff;min-width: 992px!important;">
@@ -21,7 +33,7 @@
 								<div id="main" style="box-sizing: border-box;">
 									<div class="container" style="box-sizing: border-box;width: 100%;padding-right: 15px;padding-left: 15px;margin-right: auto;margin-left: auto;min-width: 992px!important;">
 										<div class="intro" style="box-sizing: border-box;">
-											Thanks for taking your time today! Please see the two follow up challenges below as part of your next step. <br style="box-sizing: border-box;"><br style="box-sizing: border-box;">
+											Thank you for your time today! Please see the two tech challenges below. <br style="box-sizing: border-box;"><br style="box-sizing: border-box;">
 										</div>
 										<div class="card" style="box-sizing: border-box;position: relative;display: flex;-ms-flex-direction: column;flex-direction: column;min-width: 0;word-wrap: break-word;background-color: #fff;background-clip: border-box;border: 1px solid rgba(0,0,0,.125);border-radius: .25rem;">
 											<div class="challenge card-body" style="box-sizing: border-box;-ms-flex: 1 1 auto;flex: 1 1 auto;min-height: 1px;padding: 1.25rem;">
@@ -118,9 +130,9 @@
 													<div class="sc-notice info" style="box-sizing: border-box; border-radius: 3px; margin: 12px 0; min-height: 20px; padding: 12px 12px 12px 48px; position: relative; display: table; border: 3px solid transparent; border-color: #cce0ff;">
 														<div class="bluebox" style="background: #cce0ff; display: block; height: 100%; left: 0; position: absolute; top: 0; width: 36px;"></div>
 														<ul style="box-sizing: border-box;margin-top: 0;margin-bottom: 1rem;">
-															<li style="box-sizing: border-box;">merchantAccount: <code style="box-sizing: border-box;font-family: SFMono-Regular,Menlo,Monaco,Consolas,&quot;Liberation Mono&quot;,&quot;Courier New&quot;,monospace;font-size: 87.5%;color: #e83e8c;word-wrap: break-word;">AdyenRecruitmentCOM</code></li>
-															<li style="box-sizing: border-box;">API Key (x-api-key): <code style="box-sizing: border-box;font-family: SFMono-Regular,Menlo,Monaco,Consolas,&quot;Liberation Mono&quot;,&quot;Courier New&quot;,monospace;font-size: 87.5%;color: #e83e8c;word-wrap: break-word;">AQE1hmfxKo3NaxZDw0m/n3Q5qf3Ve55dHZxYTFdTxWq+l3JOk8J4BO7yyZBJ4o0JviXqoc8j9sYQwV1bDb7kfNy1WIxIIkxgBw==-q7XjkkN/Cud0WELZF+AzXpp/PuCB8+XmcdgqHYUWzTA=-Kk9N4dG837tIyjZF</code></li>
-															<li style="box-sizing: border-box;">Client Key (clientKey): <code style="box-sizing: border-box;font-family: SFMono-Regular,Menlo,Monaco,Consolas,&quot;Liberation Mono&quot;,&quot;Courier New&quot;,monospace;font-size: 87.5%;color: #e83e8c;word-wrap: break-word;">test_GWXWP766DVDVHP3NUESVCEBV5AKZCOGJ</code></li>
+															<li style="box-sizing: border-box;">merchantAccount: <code style="box-sizing: border-box;font-family: SFMono-Regular,Menlo,Monaco,Consolas,&quot;Liberation Mono&quot;,&quot;Courier New&quot;,monospace;font-size: 87.5%;color: #e83e8c;word-wrap: break-word;">' . $merchantAccount . '</code></li>
+															<li style="box-sizing: border-box;">API Key (x-api-key): <code style="box-sizing: border-box;font-family: SFMono-Regular,Menlo,Monaco,Consolas,&quot;Liberation Mono&quot;,&quot;Courier New&quot;,monospace;font-size: 87.5%;color: #e83e8c;word-wrap: break-word;">' . $apikey . '</code></li>
+															<li style="box-sizing: border-box;">Client Key (clientKey): <code style="box-sizing: border-box;font-family: SFMono-Regular,Menlo,Monaco,Consolas,&quot;Liberation Mono&quot;,&quot;Courier New&quot;,monospace;font-size: 87.5%;color: #e83e8c;word-wrap: break-word;">' . $clientkey . '</code></li>
 														</ul>
 													</div>
 													<div class="sc-notice info" style="box-sizing: border-box; border-radius: 3px; margin: 12px 0; min-height: 20px; padding: 12px 12px 12px 48px; position: relative; display: table; border: 3px solid transparent; border-color: #cce0ff;">
@@ -132,7 +144,7 @@
 															<li style="box-sizing: border-box;">http://localhost:8000</li>
 															<li style="box-sizing: border-box;">http://localhost:8080</li>
 															<li style="box-sizing: border-box;">http://127.0.0.1:5000</li>
-														</ul>Please ensure that your website is running on one of the above permitted domains; if not you will be unable to load your credit card fields.<br style="box-sizing: border-box;"><em style="font-size: 14px;box-sizing: border-box;">If you do want to run your server on another domain, feel free to reach out to me and we will add it for you.</em>
+														</ul>Please ensure that your website is running on one of the above permitted domains; if not you will be unable to load your credit card fields.<br style="box-sizing: border-box;"><em style="font-size: 14px;box-sizing: border-box;">If you do want to run your server on another domain, feel free to reach out to us and we will add it for you.</em>
 													</div>
 
 													<br style="box-sizing: border-box;">If you are in the midst of testing credit card payments, and are getting a 422: Unable to decrypt data error, that’s an issue with the domain where you are hosting your front-end website or the clientKey. Nonetheless, feel free to reach out to us if you still cannot resolve the error.<br style="box-sizing: border-box;">

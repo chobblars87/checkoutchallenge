@@ -243,6 +243,7 @@ label {
 .info {
   border-radius: 3px;
   min-height: 20px;
+  max-width: calc(100% - 38px);
   padding: 12px 12px 12px 48px;
   position: relative;
   display: table;
@@ -389,14 +390,10 @@ ol > li:before {
 .multi-notice {
   display: flex;
   flex-direction: row;
-<<<<<<< HEAD
-  /* max-width: 100%; */
   flex-wrap: wrap;
   justify-content: end;
-=======
   flex-wrap: wrap;
   justify-content: space-around;
->>>>>>> 47b9dddb000c48917b084bd146b67b626eae39ba
 }
 
 .fillspace {

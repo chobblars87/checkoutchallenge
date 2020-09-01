@@ -62,7 +62,7 @@
 
 		$data = array(
 			'email' => $email,
-			'merchantCodes' => array('MerchantAccount' . merchantAccountv2),
+			'merchantCodes' => array('MerchantAccount.' . merchantAccountv2),
 			'name' => array('firstName' => $firstname, 'lastName' => $lastname),
 			'roles' => array("Merchant_standard_role", "Merchant_technical_integrator", "View_Payments"),
 			'timeZoneCode' => $timezone,
@@ -70,7 +70,7 @@
 		);
 
 		$json = json_encode($data);
-
+		error_log($json);
 		$inviteWebUser = doCurl($prefix . "inviteWebUser", $json);
 
 		echo json_encode($data);

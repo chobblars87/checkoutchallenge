@@ -1,6 +1,7 @@
 <?php
 
 	require_once ('authentication.php');
+	require_once '../auth/credentials.php';
 
 	session_start();
 

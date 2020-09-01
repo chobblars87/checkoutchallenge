@@ -20,7 +20,7 @@
 
 	if ($ver == 2) {
 		$merchantAccount = merchantAccountv2;
-		$apikey = apikey;
+		$apikey = apikeyv2;
 		$clientkey = clientkeyv2;
 	} else {
 		$merchantAccount = merchantAccount;

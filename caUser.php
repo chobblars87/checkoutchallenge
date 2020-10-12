@@ -58,7 +58,7 @@
 			$timezone = "Asia/Singapore";
 		}
 
-		$username = strtolower(str_replace(" ", "", $firstname) . "." . str_replace(" ", "", $lastname));
+		$username = strtolower(str_replace(" ", ".", $firstname) . "." . str_replace(" ", ".", $lastname));
 
 		$data = array(
 			'email' => $email,

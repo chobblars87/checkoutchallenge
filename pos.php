@@ -22,17 +22,7 @@
 		$countDetails++;
 	}
 
-	//if (isset($_GET['v2'])) {
-		$ver = 2;
-		$merchantAccount = merchantAccountv2;
-		$apikey = apikeyv2; //'AQEyhmfxLI3MaBFLw0m/n3Q5qf3VaY9UCJ14XWZE03G/k2NFitRvbe4N1XqH1eHaH2AksaEQwV1bDb7kfNy1WIxIIkxgBw==-y3qzswmlmALhxaVPNjYf74bqPotG12HroatrKA066yE=-W+t7NF;s4}%=kUSD';
-		$clientkey = clientkeyv2; //'test_CIXAPNBW2JERLEJ6GYYC3WBLVMO2HIZ3';
-	// } else {
-	// 	$ver = 1;
-	// 	$merchantAccount = merchantAccount;
-	// 	$apikey = apikey; //'AQE1hmfxKo3NaxZDw0m/n3Q5qf3Ve55dHZxYTFdTxWq+l3JOk8J4BO7yyZBJ4o0JviXqoc8j9sYQwV1bDb7kfNy1WIxIIkxgBw==-q7XjkkN/Cud0WELZF+AzXpp/PuCB8+XmcdgqHYUWzTA=-Kk9N4dG837tIyjZF';
-	// 	$clientkey = clientkey; //'test_GWXWP766DVDVHP3NUESVCEBV5AKZCOGJ';
-	// }
+	$terminalid = 'V400m-346190779';
 
 	$header = ""; $body = ""; $footer = ""; $endbody = "";
 
@@ -54,100 +44,50 @@
 					</div>
 					<div class="card">
 						<div class="challenge card-body">
-							<h5>Challenge 1: Checkout, Checkout, Checkout</h5>
-							<p>You will be using Adyen’s Checkout Drop-in web solution to integrate a typical eCommerce shopper checkout flow. <br />Follow the instructions below and don\'t hesitate to reach out to us if you need any help!</p>
-							<p>Using the programming language of your choice, integrate the following (including backend server): <br />
-							<a href="https://docs.adyen.com/checkout/drop-in-web">https://docs.adyen.com/checkout/drop-in-web</a>.</p>
-							<p>At the minimum, your integration needs to meet the conditions below:</p>
+							<h5>Challenge 1: Terminal API</h5>
+							<p>You will be using Adyen’s Terminal API solution to integrate a typical POS payment flow.<br />Follow the instructions below and don\'t hesitate to reach out to us if you need any help!</p>
+							<p>Using the programming language of your choice, integrate the following:<br />
+							<a href="https://docs.adyen.com/point-of-sale/make-a-payment">https://docs.adyen.com/point-of-sale/make-a-payment</a>.</p>
+							<p>Please use our <strong>cloud</strong> endpoint with a <strong>synchronous</strong> request/response structure. At the minimum, your integration needs to meet the conditions below:</p>
 							<div class="sc-notice info">
 								<ol>
-									<li>Accept card payments (Visa and Mastercard)</li>
-									<li>Accept at least 1 local payment method - for example:
-									 	<ul>
-											<li>Alipay (for CN/SG)</li>
-											<li>POLi (for AU/NZ)</li>
-											<li>iDEAL (NL)</li>
-										</ul>
-									</li>
-									<li>Perform 3DS2 on all card payments - <a href="https://docs.adyen.com/checkout/3d-secure/redirect-3ds2-3ds1/web-drop-in">https://docs.adyen.com/checkout/3d-secure/redirect-3ds2-3ds1/web-drop-in</a></li>
+									<li>The ability to query a card\'s details: CardAcquisiton</li>
+									<li>The ability to process a payment: PaymentRequest</li>
+									<li>The ability to cancel a payment: AbortRequest</li>
 								</ol>
 							</div>
 							<p>Once you have completed the integration, please be prepared to walk us through it (including any challenges you had) during your next interview. Additionally, please share the following:</p>
 							<ul>
-								<li>2 pspReferences (unique payment reference) for two example payments - one card payment and one local payment method.</li>
-								<li>Example requests / responses for the above-mentioned pspReferences for all API calls (merchantAccount: ' . $merchantAccount . ')</li>
-								<li>Your entire project to us via a ZIP file/Github <strong><u>before</u></strong> the interview so that we can also look at it.</li>
+								<li>Example requests / responses from your integration for all API calls</li>
+								<li>Your code via a ZIP file <strong><u>before</u></strong> the interview so that we can also look at it.</li>
 							</ul>
-							<p>When making your payment request, make sure that the value for your reference field is set to: ' . (isset($_GET['firstname']) ? $_GET['firstname'] : '{yourFirstName}') . '_checkoutChallenge.</p>
-							<p>With regards to the overall UI, feel free to design it in any way you please. Also, the above three conditions are the baseline integration, but feel free to add on more functionality to your checkout flow.</p>
-							<p>Lastly, as there are example integrations online, <u><strong>no pre-built libraries or example code</strong> may be used in your solution</u>. Here are some examples of what we are referring to:</p>
-								<div class="multi-notice">
-									<div class="sc-notice info rorw ok">
-										OK to use:
-										<div class="fillspace">
-											<ul>
-												<li>PHP: cURL library for HTTP POST requests</li>
-												<li>Python: requests library</li>
-												<li>Node: express/axios</li>
-												<li>C#: HttpClient</li>
-											</ul>
-										</div>
-									</div>
-									<div class="sc-notice info rorw not">
-										Not ok to use: API wrappers. For example:
-										<ul>
-											<li><a href = "https://github.com/Adyen/adyen-python-api-library">https://github.com/Adyen/adyen-python-api-library</a></li>
-											<li><a href = "https://github.com/Adyen/adyen-java-api-library">https://github.com/Adyen/adyen-java-api-library</a></li>
-											<li><a href = "https://github.com/Adyen/adyen-php-api-library">https://github.com/Adyen/adyen-php-api-library</a></li>
-											<li><a href = "https://github.com/Adyen/adyen-dotnet-api-library">https://github.com/Adyen/adyen-dotnet-api-library</a></li>
-											<li><a href = "https://github.com/Adyen/adyen-node-api-library">https://github.com/Adyen/adyen-node-api-library</a></li>
-										</ul>
-									</div>
-								</div>
-							<br />
+							<p>A terminal has been set up and is ready for you to integrate with. Please keep the transaction amount below $100 AUD - this is the limit at which cards require a PIN in AU.</p>
 							<strong>Helpful Links</strong>
 							<div class="sc-notice info">
 								<ul>
-									<li>
-										Drop-in Documentation
-										<ul>
-											<li><a href="https://docs.adyen.com/checkout/drop-in-web">https://docs.adyen.com/checkout/drop-in-web</a></li>
-											<li><a href="https://docs.adyen.com/checkout/3d-secure/redirect-3ds2-3ds1/web-drop-in">https://docs.adyen.com/checkout/3d-secure/redirect-3ds2-3ds1/web-drop-in</a></li>
-										</ul>
-									</li>
-									<li>Test credentials: <a href="https://docs.adyen.com/developers/test-cards/test-card-numbers">https://docs.adyen.com/developers/test-cards/test-card-numbers</a></li>
+									<li>Make a payment: <a href="https://docs.adyen.com/point-of-sale/make-a-payment">https://docs.adyen.com/point-of-sale/make-a-payment</a></li>
+									<li>Card acquisition: <a href="https://docs.adyen.com/point-of-sale/card-acquisition">https://docs.adyen.com/point-of-sale/card-acquisition</a></li>
 									<li>Code examples: <a href="https://github.com/Adyen/">https://github.com/Adyen/</a></li>
+									Our .NET and PHP libraries (amongst others) include implementations of the Terminal API.
 								</ul>
 							</div>
 							<br />
-							<strong>Authentication & Credentials</strong>
+							<strong>Connection Details</strong>
 							<div class="sc-notice info">
 								<ul>
-									<li>Merchant Account: <code>' . $merchantAccount . '</code></li>
-									<li>API Key (x-api-key): <code>' . $apikey . '</code></li>
-									<li>Client Key (clientKey): <code>' . $clientkey . '</code></li>
+									<li>Terminal: <code>' . $terminalid . '</code></li>
+									<li>Merchant Account: <code>' . merchantAccountPOS . '</code></li>
+									<li>User: <code>' . userPOS . '</code></li>
+									<li>API Key (x-api-key): <code>' . apikeyPOS . '</code></li>
 								</ul>
 							</div>
-							<div class="sc-notice info">
-							The permitted domains for the above <strong>clientKey</strong> are: <br />
-								<ul>
-									<li>http://localhost:3000</li>
-									<li>http://localhost:5000</li>
-									<li>http://localhost:8000</li>
-									<li>http://localhost:8080</li>
-									<li>http://127.0.0.1:5000</li>
-								</ul>
-								Please ensure that your website is running on one of the above permitted domains; if not you will be unable to load your credit card fields.<br /><em style="font-size:14px">If you do want to run your server on another domain, feel free to reach out to us and we will add it for you.</em>
-							</div>
 
-							<p>If you are in the midst of testing credit card payments, and are getting a 422: Unable to decrypt data error, that’s an issue with the domain where you are hosting your front-end website or the clientKey. Nonetheless, feel free to reach out to us if you still cannot resolve the error.</p>
-							<p>You don’t need to publicly host your website (however, please feel free to do so). We will schedule a Zoom call for you to share your screen and run through your solution with us.</p>';
-
+							<p>We will schedule a Zoom call for you to share your screen and run through your solution with us.</p>';
 
 					$footer = '<div id="footer">
 									<hr class="mb-4">
 
-									<b>Adyen’s Dashboard (Web Portal)</b><br/><br/>
+									<strong>Adyen’s Dashboard (Web Portal)</strong><br/><br/>
 									<div id="caReg">
 										<div class="instructions">
 											The final piece of the puzzle that you will need is to a user for the Adyen Dashboard; a portal from where you can access data and insights in to the platform, and see your payments coming in once you’ve completed the first part of the integration to help diagnose any problems you may be facing.
@@ -202,9 +142,9 @@
 							<hr class="mb-4 nobot">
 							<div class="challenge card-body">
 
-								<h5>Challenge 2: The Adyen (not so) Tech Test </h5><br/>
-								In addition, please follow the link below to access a quick quiz and fill out your answers. This should not take any longer than 30 minutes, but please take as much time as you need!<br/><br/>
-								<a href="https://forms.gle/bFGdcUr9oYkqj8NW8">Not so Technical Test</a>
+								<h5>Challenge 2: The Adyen POS Test </h5><br />
+								Please follow the link below to access a quick quiz and fill out your answers. This should not take any longer than 30 minutes, but please take as much time as you need! <br /><br />
+								<a href="https://forms.gle/TCtKcABDUVwh6qicA">Adyen POS Test</a>
 								<div class="bottom-spacer"></div>
 							</div>
 						</div>
@@ -223,7 +163,7 @@
 				  <form class="modal-content animate" method="post">
 				    <div class="container">
 
-				      <label for="psw"><b>Password</b></label>
+				      <label for="psw"><strong>Password</strong></label>
 				      <input type="password" placeholder="Enter Password" name="password" required>
 
 				      <button id="submitLogin" class="btn btn-success" type="submit">Connect</button>
@@ -288,7 +228,7 @@
 					    			'Thanks for submitting the form, you will now receive an email with an invite to create a password, giving you access to the Adyen Dashboard. <br/><br/>Best of luck!'
 					    			);
 					    		$.post(
-							    	'mail<?php //if ($ver == 2) { echo "2"; }?>.php',
+							    	'mailpos.php',
 							    	postdata + '&username=' + data.userName,
 							    	function(data,status) {
 							    		if (status == "success") {

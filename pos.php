@@ -30,7 +30,7 @@
 	    $_SESSION['auth'] = true;
 
 	$header = '<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
-				<h5 class="my-0 mr-md-auto font-weight-normal">Adyen Checkout Challenge</h5>
+				<h5 class="my-0 mr-md-auto font-weight-normal">Adyen POS Challenge</h5>
 				<form id="logoutForm" style="margin-block-end: 0;" method="post">
 					<input type="hidden" name="logout" value="true" />
 					<button  class="btn btn-success">Logout</button>
@@ -181,7 +181,7 @@
 <html lang="en">
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Adyen Checkout Challenge</title>
+		<title>Adyen POS Challenge</title>
     <link type="image/ico" rel="shortcut icon" href="images/favicon.ico">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 		<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>

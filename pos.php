@@ -51,7 +51,7 @@
 							<p>Please use our <strong>cloud</strong> endpoint with a <strong>synchronous</strong> request/response structure. At the minimum, your integration needs to meet the conditions below:</p>
 							<div class="sc-notice info">
 								<ol>
-									<li>The ability to query a card\'s details: CardAcquisiton</li>
+									<li>The ability to query a card\'s details: CardAcquistion</li>
 									<li>The ability to process a payment: PaymentRequest</li>
 									<li>The ability to cancel a payment: AbortRequest</li>
 								</ol>
@@ -113,21 +113,21 @@
 											</div><br />
 
 											<div class="row">
-								            	<div class="col-md-6 mb-3">
-									                <label for="firstName">First name</label>
-									                <input type="text" class="form-control" name="firstname" placeholder="" value="' . $_GET['firstname'] . '" required>
-								              	</div>
-								              	<div class="col-md-6 mb-3">
-									                <label for="lastName">Last name</label>
-									                <input type="text" class="form-control" name="lastname" placeholder="" value="' . $_GET['lastname'] . '" required>
-									            </div>
-								            </div>
-
-								            <div class="mb-3">
-								              	<label for="email">Email</label>
-								            	<input type="email" class="form-control" name="email" placeholder="you@example.com" value="' . $_GET['email'] . '" required>
-								            </div>
+					            	<div class="col-md-6 mb-3">
+						                <label for="firstName">First name</label>
+						                <input type="text" class="form-control" name="firstname" placeholder="" value="' . $_GET['firstname'] . '" required>
+					              	</div>
+					              	<div class="col-md-6 mb-3">
+						                <label for="lastName">Last name</label>
+						                <input type="text" class="form-control" name="lastname" placeholder="" value="' . $_GET['lastname'] . '" required>
+						            </div>
+					            </div>
+					            <div class="mb-3">
+					              	<label for="email">Email</label>
+					            	<input type="email" class="form-control" name="email" placeholder="you@example.com" value="' . $_GET['email'] . '" required>
+					            </div>
 											<input type="hidden" name="timezone" id="timezone" value="">
+											<input type="hidden" name="merchantaccount" id="merchantaccount" value="' . merchantAccountPOS . '">
 											<input type="hidden" name="version" id="version" value="' . $ver . '"><br/>
 											<button class="btn btn-success" type="submit">Create Account</button>
 										</form>
@@ -214,8 +214,7 @@
 				$('#reqUser').submit(function(e){
 					e.preventDefault();
 					var postdata = $(this).serialize();
-
-				    $.post(
+					  $.post(
 				    	'caUser.php',
 				    	postdata,
 				    	function(data,status){

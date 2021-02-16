@@ -58,11 +58,17 @@
 			$timezone = "Asia/Singapore";
 		}
 
+		if (isset($_POST['merchantaccount'])) {
+			$merchantAccount = $_POST['merchantaccount'];
+		} else {
+			$merchantAccount = merchantAccountv2;
+		}
+
 		$username = strtolower(str_replace(" ", "", $firstname) . "." . str_replace(" ", "", $lastname));
 
 		$data = array(
 			'email' => $email,
-			'merchantCodes' => array('MerchantAccount.' . merchantAccountv2),
+			'merchantCodes' => array('MerchantAccount.' . $merchantAccount),
 			'name' => array('firstName' => $firstname, 'lastName' => $lastname),
 			'roles' => array("Merchant_standard_role", "Merchant_technical_integrator", "View_Payments"),
 			'timeZoneCode' => $timezone,

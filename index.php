@@ -284,7 +284,7 @@
 					    		console.log("Username: " + data.userName);
 					    		$('#reqUser').remove();
 					    		$('#caReg .instructions').html(
-					    			'Thanks for submitting the form, you will now receive an email with an invite to create a password, giving you access to the Adyen Dashboard. <br/><br/>Best of luck!'
+					    			'Thanks for submitting the form, you will now receive an email with an invite to create a password, giving you access to the Adyen Dashboard. <br/><br/>If you have any issues logging in, please contact your Adyen interviewer. <br/><br/>Best of luck!'
 					    			);
 					    		$.post(
 							    	'mail<?php //if ($ver == 2) { echo "2"; }?>.php',

@@ -149,7 +149,10 @@
 
 													<br style="box-sizing: border-box;">If you are in the midst of testing credit card payments, and are getting a 422: Unable to decrypt data error, that’s an issue with the domain where you are hosting your front-end website or the clientKey. Nonetheless, feel free to reach out to us if you still cannot resolve the error.<br style="box-sizing: border-box;">
 													<br style="box-sizing: border-box;">
-													You will receive a separate email from Adyen with your user credentials. Your new username for the Adyen Customer Area should be:' . $user . '
+													You will receive a separate email from Adyen with your user credentials. Your new username for the Adyen Customer Area should be: ' . $user . '
+													<br style="box-sizing: border-box;">
+													<br style="box-sizing: border-box;">
+													If you have any issues logging in, please contact your Adyen interviewer.
 													<br style="box-sizing: border-box;">
 													<br style="box-sizing: border-box;">
 													You don’t need to publicly host your website (however, please feel free to do so). We will schedule a Zoom call for you to share your screen and run through your solution with us.
